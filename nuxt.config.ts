@@ -27,7 +27,7 @@ const config: NuxtConfig = {
 
   css: [],
 
-  plugins: ['@/plugins/firebase'],
+  plugins: ['@/plugins/firebase', '@/plugins/apollo'],
 
   components: [{ path: '@/components', prefix: 'ntt' }],
 
