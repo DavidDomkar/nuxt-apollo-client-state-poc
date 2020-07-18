@@ -1,6 +1,4 @@
-# nuxt-typescript-template
-
-Includes typescript runtime, pug, sass, tailwindcss, jest and eslint/prettier config.
+# nuxt-apollo-client-state-poc
 
 ## Build Setup
 
