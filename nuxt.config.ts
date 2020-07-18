@@ -1,7 +1,13 @@
 import { NuxtConfig } from '@nuxt/types';
+import { env } from './config';
 
 const config: NuxtConfig = {
   mode: 'universal',
+
+  server: {
+    host: env.host,
+    port: env.port,
+  },
 
   target: 'server',
 
@@ -21,21 +27,26 @@ const config: NuxtConfig = {
 
   css: [],
 
-  plugins: [],
+  plugins: ['@/plugins/firebase'],
 
   components: [{ path: '@/components', prefix: 'ntt' }],
 
-  buildModules: [
-    '@nuxtjs/eslint-module',
-    '@nuxt/typescript-build',
-    '@nuxtjs/stylelint-module',
-    '@nuxtjs/tailwindcss',
-    'nuxt-composition-api',
-  ],
+  buildModules: ['@nuxtjs/eslint-module', '@nuxt/typescript-build', '@nuxtjs/stylelint-module', '@nuxtjs/tailwindcss', 'nuxt-composition-api', '@/modules/firebase'],
 
-  modules: ['@nuxtjs/pwa'],
+  modules: ['@nuxtjs/pwa', '@nuxtjs/dotenv'],
 
   build: {},
+
+  firebase: {
+    config: env.firebase.config,
+  },
+
+  pwa: {
+    workbox: {
+      importScripts: ['/firebase.sw.js'],
+      dev: process.env.NODE_ENV === 'development',
+    },
+  },
 };
 
 export default config;

@@ -1,0 +1,8 @@
+package.json
+*sw.js
+
+node_modules
+coverage
+dist
+
+dependencies

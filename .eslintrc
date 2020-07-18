@@ -4,13 +4,11 @@
     "browser": true,
     "node": true
   },
-  "extends": [
-    "@nuxtjs/eslint-config-typescript",
-    "prettier",
-    "prettier/vue",
-    "plugin:prettier/recommended",
-    "plugin:nuxt/recommended"
-  ],
+  "extends": ["@nuxtjs/eslint-config-typescript", "prettier", "prettier/vue", "plugin:prettier/recommended", "plugin:nuxt/recommended"],
   "plugins": ["prettier"],
-  "rules": {}
+  "rules": {
+    "no-console": "off",
+    "no-debugger": "off",
+    "no-useless-constructor": "off"
+  }
 }
