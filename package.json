@@ -35,11 +35,11 @@
     "firebase-admin": "^9.0.0",
     "fireorm": "^0.15.0",
     "graphql-tag": "^2.10.4",
-    "nuxt": "2.13.3",
+    "nuxt": "2.15.7",
     "nuxt-composition-api": "0.10.6"
   },
   "devDependencies": {
-    "@nuxt/types": "2.13.3",
+    "@nuxt/types": "2.15.7",
     "@nuxt/typescript-build": "2.0.0",
     "@nuxtjs/eslint-config": "3.0.0",
     "@nuxtjs/eslint-config-typescript": "2.0.0",
